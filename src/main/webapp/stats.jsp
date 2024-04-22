@@ -136,8 +136,8 @@
 		           type: 'scatter', // The type of trace (line)
 		           //type: 'heatmap',
 		           //colorscale: 'Viridis',
-		       	   mode: 'lines+markers', //  Display lines and markers
-		       	   
+		       	   //mode: 'lines+markers', //  Display lines and markers
+		       	   mode: 'lines+markers', 
 		       	   //line: {
 		       		//   color: 'blue',
 		       		 //  width: 3
