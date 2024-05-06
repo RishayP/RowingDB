@@ -128,31 +128,18 @@ public class RaceInfo extends HttpServlet {
 	    		
 	    	}
 	    	
-	    	//pst.setString(1, gender);
-	    	out.print("reaching here also ");
-	    	
-	    	
 	    	ResultSet rs = pst.executeQuery();
-	    	
-	    	//rs.last();
-	    	//String s = rs.getString(1);
-			//int numRows = rs.getRow();
-	    	
-	    	
-	    	
+	    
 			ArrayList<RaceData> raceInfoArray = new ArrayList<RaceData>();
 	    	while (rs.next()) {
 	    		RaceData data = new RaceData();
-				//data.setEventType(rs.getString("eventType"));
-				//data.setGender(rs.getString("gender"));
-				//strArray.add(data);
 				data.setEventType(rs.getString("EventType"));
 				data.setGender(rs.getString("gender"));
 				data.setBoatType(rs.getString("boatType"));
+				// location not needed any more
 				data.setLocation(rs.getString("location"));
 				data.setExperience(rs.getString("experience"));
 				data.setYear(rs.getString("year"));
-				//data.setYear(rs.getString("time"));
 				
 				Integer Time = rs.getObject("time", Integer.class);
 				String tmp = Time.toString();
