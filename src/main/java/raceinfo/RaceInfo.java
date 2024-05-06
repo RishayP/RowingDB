@@ -52,8 +52,6 @@ public class RaceInfo extends HttpServlet {
 	    	} else {
 	    		
 	    		int i = 1;
-	    		// user has given input for atleast one category
-	    		//pst = con.prepareStatement("select * from race_info where");
 	    		String sqlStatement = "select * from raceinfo6 where ";
 	    		
 	    		Boolean IsFirstqueryAttribute = true;
