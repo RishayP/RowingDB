@@ -39,7 +39,8 @@ public class RaceInfo extends HttpServlet {
 	    	String eventType =  request.getParameter("eventtype");
 	    	String gender =  request.getParameter("gender");
 	    	String boattype =  request.getParameter("boattype");
-	    	String location=  request.getParameter("location");
+	    	String location =  request.getParameter("location");
+	    	String experience =  request.getParameter("experience");
 	    	String year =  request.getParameter("year");
 	    	
 	    	//con = DriverManager.getConnection("jdbc:mysql://localhost:3306/webbase","root","MangoApple357!");
@@ -47,7 +48,7 @@ public class RaceInfo extends HttpServlet {
 	    	PreparedStatement pst = null;
 	    	//PreparedStatement pst = con.prepareStatement("select * from race_info where name = ? and pass = ?");
 
-	    	if (eventType == "" && gender == "" && boattype =="" && location=="" &&year =="") {
+	    	if (eventType == "" && gender == "" && boattype =="" && experience=="" &&year =="") {
 	    		pst = con.prepareStatement("select * from raceinfo6 ORDER BY Year DESC");
 	    	} else {
 	    		
@@ -81,12 +82,12 @@ public class RaceInfo extends HttpServlet {
 
 	    		}
 	    		
-	    		if (location != "") {
+	    		if (experience != "") {
 	    			if (IsFirstqueryAttribute == true) {
-	    				sqlStatement = sqlStatement + "Location = ?";
+	    				sqlStatement = sqlStatement + "Experience = ?";
 	    				IsFirstqueryAttribute = false;
 	    			} else {
-	    				sqlStatement = sqlStatement + "and Location = ?";
+	    				sqlStatement = sqlStatement + "and Experience = ?";
 	    			}
 
 	    		}
@@ -116,8 +117,8 @@ public class RaceInfo extends HttpServlet {
 	    			pst.setString(i++, boattype);
 	    		}
 	    		
-	    		if (location != "") {
-	    			pst.setString(i++, location);
+	    		if (experience != "") {
+	    			pst.setString(i++, experience);
 
 	    		}
 	    		
@@ -149,6 +150,7 @@ public class RaceInfo extends HttpServlet {
 				data.setGender(rs.getString("gender"));
 				data.setBoatType(rs.getString("boatType"));
 				data.setLocation(rs.getString("location"));
+				data.setExperience(rs.getString("experience"));
 				data.setYear(rs.getString("year"));
 				//data.setYear(rs.getString("time"));
 				

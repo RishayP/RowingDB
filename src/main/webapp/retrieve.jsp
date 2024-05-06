@@ -106,13 +106,15 @@ th, td {
                     </li>
                     <li class="nav-item mx-0 mx-lg-1 dropdown">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded dropdown-toggle"
-                            href="#" role="button" id="locationDropdown" data-bs-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Location</a>
+                            href="#" role="button" id="experienceDropdown" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Experience</a>
                         <div class="dropdown-menu" aria-labelledby="locationDropdown">
-                            <a class="dropdown-item" href="#">Lake Union</a>
-                            <a class="dropdown-item" href="#">Lakewood</a>
+                            <a class="dropdown-item" href="#">Novice</a>
+                            <a class="dropdown-item" href="#">U17</a>
+                            <a class="dropdown-item" href="#">U19</a>
+                            <a class="dropdown-item" href="#">Jr</a>
                         </div>
-                        <input type = "text" name="location" class="form-control dropdown-textbox" id="eventTypeTextbox" readonly>
+                        <input type = "text" name="experience" class="form-control dropdown-textbox" id="eventTypeTextbox" readonly>
                     </li>
                     <li class="nav-item mx-0 mx-lg-1 dropdown">
                         <a class="nav-link py-3 px-0 px-lg-3 rounded dropdown-toggle"
@@ -149,7 +151,7 @@ th, td {
             <th>EventType</th>
             <th>Gender</th>
             <th>BoatType</th>
-            <th>Location</th>
+            <th>Experience</th>
             <th>Year</th>
             <th>Time</th>
             <th>Rowers</th>
@@ -167,7 +169,7 @@ th, td {
           <td><%=r.getEventType()%></td>
           <td><%=r.getGender()%></td>
           <td><%=r.getBoatType()%></td>
-          <td><%=r.getLocation()%></td>
+          <td><%=r.getExperience()%></td>
           <td><%=r.getYear()%></td>
           <td><%=r.getFormattedTime()%></td>
           <td><%=r.getRowersNames()%></td>
