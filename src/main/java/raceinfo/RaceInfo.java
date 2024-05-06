@@ -56,7 +56,6 @@ public class RaceInfo extends HttpServlet {
 	    		//pst = con.prepareStatement("select * from race_info where");
 	    		String sqlStatement = "select * from raceinfo6 where ";
 	    		
-	    		//pst
 	    		Boolean IsFirstqueryAttribute = true;
 	    		
 	    		if (eventType != "") {
